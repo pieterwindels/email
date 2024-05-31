@@ -36,4 +36,5 @@ if st.button("Send new Email"):
                 except Exception as e:
                     # Display an error message if there is an issue sending the email
                     st.error("Email could not be sent. Please try again later.")
+st.write(streamlit.__version__)
 
