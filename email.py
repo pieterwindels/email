@@ -11,7 +11,7 @@ user_email = st.text_input("Email")
 
 if st.button("Send new Email"):
 
-        st.write('user_email')
+        st.write(user_email)
 
         if user_email==None:
                 st.error("Please enter your email address to request full access to the app.")
