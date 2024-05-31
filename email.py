@@ -4,7 +4,7 @@ import smtplib
 
 st.header('I want full access to the app!')
 
-user_email = st.text_input("Email")
+st.text_input("Email", key='body')
 
 #st.text_input('your email address', key='body')
 #st.button("Send email")
@@ -13,11 +13,11 @@ if st.button("Send new Email"):
 
         st.write('1')
 
-        if user_email==None:
+        if st.session_state.body is None:
                 st.error("Please enter your email address to request full access to the app.")
 
         else:
-                st.write('2')
+                st.write(st.session_state.body)
                 try:
                     # Set up the SMTP server and login to your email account
                     server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
