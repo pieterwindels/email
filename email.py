@@ -25,7 +25,7 @@ if st.button("Send new Email"):
                     server.login("devpwindels@gmail.com", "eskuahufhdrwiwzb")
                 
                     # Create the email message
-                    message = "Subject: New Email from Streamlit App\n\n" + "Email: " + user_email
+                    message = "Subject: New Email from Streamlit App\n\n" + "Email: " + st.session_state.body
                 
                     # Send the email
                     server.sendmail("devpwindels@gmail.com", "immo2smart@gmail.com", message)
