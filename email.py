@@ -13,7 +13,7 @@ if st.button("Send new Email"):
 
         st.write('1')
 
-        if st.session_state.body is None:
+        if st.session_state.body == None:
                 st.error("Please enter your email address to request full access to the app.")
 
         else:
