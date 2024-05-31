@@ -11,12 +11,13 @@ user_email = st.text_input("Email")
 
 if st.button("Send new Email"):
 
-        st.write(user_email)
+        st.write('1')
 
         if user_email==None:
                 st.error("Please enter your email address to request full access to the app.")
 
         else:
+                st.write('2')
                 try:
                     # Set up the SMTP server and login to your email account
                     server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
